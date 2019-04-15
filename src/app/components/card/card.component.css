@@ -1,0 +1,13 @@
+.heroe-images {
+    width: 100%;
+    height: 200px;
+}
+
+.selected {
+    background-color: brown;
+}
+
+.selected .card-title {
+    color: #fff !important;
+    font-weight: bold;
+}

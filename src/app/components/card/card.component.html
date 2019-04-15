@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col s12 m6 l3" *ngFor="let heroe of heroes">
+        <div class="card" [class.selected]="heroe === isSelected">
+            <div class="card-image waves-effect waves-block waves-light heroe-images">
+              <!-- https://vignette.wikia.nocookie.net/goanimate-v4/images/2/21/The-Incredibles-_Bob_Parr.jpg/revision/latest?cb=20150416014111 -->
+              <img class="activator" src="{{heroe.image}}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">{{heroe.name}}<i class="material-icons right">more_vert</i></span>
+              <p><a href="javascript:void(0)"  (click)="selectHeroe(heroe)">{{heroe.type}}</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Description<i class="material-icons right">close</i></span>
+              <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              <a (click)="nameEdit(heroe)">Edit</a>
+              <div *ngIf="isEdit">
+                  <label>Name:
+                    <input [(ngModel)]="heroe.name" placeholder="name"/>
+                  </label>
+                </div>
+            </div>
+          </div>
+    </div>
+  </div>
+
