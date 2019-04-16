@@ -12,6 +12,10 @@
       <div *ngFor="let us of listUang2">
           <p>{{ us }}</p>
       </div>
+
+      <h4>Get Value By Path Variable & Query Param</h4>
+      <button (click)="getByPath()">By Path</button> | <button (click)="getByParam()">By Param</button>
+      <p>{{ballance | currency: 'Rp.'}}</p>
       
     </div>
   </div>

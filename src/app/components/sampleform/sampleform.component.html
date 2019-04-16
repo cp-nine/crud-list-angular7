@@ -6,27 +6,48 @@
       <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
         <div class="row">
           <div class="input-field col s12">
-            <input type="text" formControlName="firstname" id="firstname" class="validate" required>
+            <input type="text" formControlName="firstname" id="firstname">
+            <div *ngIf="submited && f.firstname.errors">
+              <div *ngIf="f.firstname.errors.required" class="form-error">First Name is required</div>
+            </div>
+
             <label for="firstname">Firs Name</label>
           </div>
 
           <div class="input-field col s12">
-            <input type="text" formControlName="lastname" id="lastname" class="validate" required>
+            <input type="text" formControlName="lastname" id="lastname">
+            <div *ngIf="submited && f.lastname.errors">
+              <div *ngIf="f.lastname.errors.required" class="form-error">Last Name is required</div>
+            </div>
+
             <label for="lastname">Last Name</label>
           </div>
 
           <div class="input-field col s12">
-            <input type="email" formControlName="email" id="email" class="validate" required>
+            <input type="email" formControlName="email" id="email">
+            <div *ngIf="submited && f.email.errors">
+              <div *ngIf="f.email.errors.required" class="form-error">Email is required</div>
+              <div *ngIf="f.email.errors.email" class="form-error">Email must be a valid email address</div>
+            </div>
+
             <label for="email">E-Mail</label>
           </div>
 
           <div class="input-field col s12">
-            <input type="password" formControlName="password" id="password" class="validate" required>
+            <input type="password" formControlName="password" id="password">
+            <div *ngIf="submitted && f.password.errors">
+                <div *ngIf="f.password.errors.required" class="form-error">Password is required</div>
+                <div *ngIf="f.password.errors.minlength || f.password.errors.maxlength" class="form-error">Password must be at least 6 characters</div>
+            </div>
             <label for="password">Password</label>
           </div>
 
           <div class="input-field col s12">
-            <input type="password" formControlName="cpassword" id="cpassword" class="validate" required>
+            <input type="password" formControlName="cpassword" id="cpassword">
+            <div *ngIf="submitted && f.cpassword.errors">
+                <div *ngIf="f.cpassword.errors.required" class="form-error">Password is required</div>
+                <div *ngIf="f.cpassword.errors.mustMatch" class="form-error">Password doesn't match</div>
+            </div>
             <label for="cpassword">Password</label>
           </div>
 

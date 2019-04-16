@@ -14,6 +14,7 @@ import { SampleComponent } from './components/sample/sample.component';
 import { SampleformComponent } from './components/sampleform/sampleform.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { RupiahPipe } from './pipes/rupiah.pipe';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { RupiahPipe } from './pipes/rupiah.pipe';
     SampleComponent,
     SampleformComponent,
     PipesComponent,
-    RupiahPipe
+    RupiahPipe,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
