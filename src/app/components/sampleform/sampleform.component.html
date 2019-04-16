@@ -1,0 +1,40 @@
+<div class="container" style="margin-top: 100px;">
+  <div class="row">
+    <div class="col s12">
+      <h4 style="text-align:center;"><b>Sample Form Validation</b></h4>
+      <hr>
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="input-field col s12">
+            <input type="text" formControlName="firstname" id="firstname" class="validate" required>
+            <label for="firstname">Firs Name</label>
+          </div>
+
+          <div class="input-field col s12">
+            <input type="text" formControlName="lastname" id="lastname" class="validate" required>
+            <label for="lastname">Last Name</label>
+          </div>
+
+          <div class="input-field col s12">
+            <input type="email" formControlName="email" id="email" class="validate" required>
+            <label for="email">E-Mail</label>
+          </div>
+
+          <div class="input-field col s12">
+            <input type="password" formControlName="password" id="password" class="validate" required>
+            <label for="password">Password</label>
+          </div>
+
+          <div class="input-field col s12">
+            <input type="password" formControlName="cpassword" id="cpassword" class="validate" required>
+            <label for="cpassword">Password</label>
+          </div>
+
+          <div class="input-field col s12">
+            <input type="submit" class="waves-effect waves-light btn" value="Submit">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

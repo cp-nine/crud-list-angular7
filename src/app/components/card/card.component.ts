@@ -30,4 +30,6 @@ export class CardComponent implements OnInit {
     this.isSelected= heroe;
   }
 
+  
+
 }

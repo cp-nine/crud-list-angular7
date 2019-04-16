@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SampleService } from 'src/app/services/sample.service';
 
 @Component({
   selector: 'app-topheroes',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopheroesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sampleService: SampleService) { }
 
   ngOnInit() {
+  }
+
+  checkService(){
+    alert(this.sampleService.getNumber());
   }
 
 }
