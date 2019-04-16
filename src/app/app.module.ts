@@ -12,6 +12,8 @@ import { HighlightDirective } from './highlight.directive';
 import { SampleService } from './services/sample.service';
 import { SampleComponent } from './components/sample/sample.component';
 import { SampleformComponent } from './components/sampleform/sampleform.component';
+import { PipesComponent } from './components/pipes/pipes.component';
+import { RupiahPipe } from './pipes/rupiah.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { SampleformComponent } from './components/sampleform/sampleform.componen
     TopheroesComponent,
     HighlightDirective,
     SampleComponent,
-    SampleformComponent
+    SampleformComponent,
+    PipesComponent,
+    RupiahPipe
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,8 @@ import { SampleformComponent } from './components/sampleform/sampleform.componen
     ReactiveFormsModule
   ],
   providers: [
-    SampleService
+    SampleService,
+    RupiahPipe
   ],
   bootstrap: [AppComponent]
 })

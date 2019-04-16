@@ -1,0 +1,18 @@
+<div class="container" style="margin-top:50px;">
+  <div class="row">
+    <div class="col s12">
+
+        <h4>Pipe by Html</h4>
+      <div *ngFor="let u of listUang">
+          <p>{{ u.uang | currency:'Rp.' }}</p>
+          <p>{{ u.uang | rupiah }}</p>
+      </div>
+
+      <h4>Pipe by Ts</h4>
+      <div *ngFor="let us of listUang2">
+          <p>{{ us }}</p>
+      </div>
+      
+    </div>
+  </div>
+</div>
